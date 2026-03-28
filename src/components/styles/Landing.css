@@ -249,6 +249,38 @@ h2.landing-info-h2 {
   top: 0;
 }
 
+.landing-role-lead {
+  animation: landingRoleLeadIn 650ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.landing-role-main {
+  animation: landingRoleMainIn 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes landingRoleLeadIn {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes landingRoleMainIn {
+  0% {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .landing-info-h2::after {
   content: "";
   position: absolute;

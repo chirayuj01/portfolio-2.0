@@ -1,36 +1,31 @@
 import { useState, useCallback } from "react";
 import "./styles/Work.css";
-import WorkImage from "./WorkImage";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
     title: "Hostel Bites",
     category: "Food Ordering System",
-    tools: "Flutter, Firebase, Mapbox, Live Tracking",
-    image: "/images/hostelbites.png",
-    link: "https://github.com/chirayujain/hostel-bites",
+    tools:
+      "Flutter, Firebase, Mapbox, Role-based ordering, live order tracking, +35% operational efficiency",
   },
   {
     title: "JobShield",
     category: "Fake Job Detection Platform",
-    tools: "Flask, NLP, Flutter Web, 95% Accuracy",
-    image: "/images/jobshield.png",
-    link: "https://github.com/chirayujain/jobshield",
+    tools:
+      "Flask, NLP, Flutter Web, 500+ postings analyzed, 95% fake-job detection accuracy",
   },
   {
     title: "Competitive Programming",
     category: "Problem Solving & Algorithms",
-    tools: "CodeChef 4★, LeetCode Knight (1888), C++, Data Structures",
-    image: "/images/leetcode.png",
-    link: "https://www.leetcode.com/chirayujain",
+    tools:
+      "CodeChef 4★, LeetCode Knight (1888), C++, data structures, algorithmic problem solving",
   },
   {
     title: "Smart India Hackathon '23",
     category: "National Innovation Contest",
-    tools: "Regionalist, Team Collaboration, Prototyping",
-    image: "/images/sih.png",
-    link: "",
+    tools:
+      "SIH'23 Regionalist, rapid prototyping, solution architecture, collaborative execution",
   },
 ];
 
@@ -111,13 +106,6 @@ const Work = () => {
                           <p>{project.tools}</p>
                         </div>
                       </div>
-                    </div>
-                    <div className="carousel-image-wrapper">
-                      <WorkImage
-                        image={project.image}
-                        alt={project.title}
-                        link={project.link}
-                      />
                     </div>
                   </div>
                 </div>

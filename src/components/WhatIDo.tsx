@@ -1,29 +1,17 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import "./styles/WhatIDo.css";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const WhatIDo = () => {
   const containerRef = useRef<(HTMLDivElement | null)[]>([]);
   const setRef = (el: HTMLDivElement | null, index: number) => {
     containerRef.current[index] = el;
   };
-  useEffect(() => {
-    if (ScrollTrigger.isTouch) {
-      containerRef.current.forEach((container) => {
-        if (container) {
-          container.classList.remove("what-noTouch");
-          container.addEventListener("click", () => handleClick(container));
-        }
-      });
-    }
-    return () => {
-      containerRef.current.forEach((container) => {
-        if (container) {
-          container.removeEventListener("click", () => handleClick(container));
-        }
-      });
-    };
-  }, []);
+
+  const handleCardClick = (index: number) => {
+    const card = containerRef.current[index];
+    if (!card) return;
+    handleClick(card);
+  };
   return (
     <div className="whatIDO">
       <div className="what-box">
@@ -61,6 +49,7 @@ const WhatIDo = () => {
           <div
             className="what-content what-noTouch"
             ref={(el) => setRef(el, 0)}
+            onClick={() => handleCardClick(0)}
           >
             <div className="what-border1">
               <svg height="100%">
@@ -90,7 +79,8 @@ const WhatIDo = () => {
               <h3>AI & MACHINE LEARNING</h3>
               <h4>Building Intelligent Systems</h4>
               <p>
-                I specialize in developing AI-powered solutions, from creating OCR confidence pipelines to building and deploying NLP models for real-world applications.
+                I build AI-powered pipelines for OCR confidence scoring, KYC extraction,
+                and intelligent document workflows at production scale.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
@@ -98,8 +88,9 @@ const WhatIDo = () => {
                 <div className="what-tags">Scikit-learn</div>
                 <div className="what-tags">TensorFlow</div>
                 <div className="what-tags">Flask</div>
-                <div className="what-tags">API Development</div>
-                <div className="what-tags">Data Pipelines</div>
+                <div className="what-tags">PyMuPDF</div>
+                <div className="what-tags">Docling</div>
+                <div className="what-tags">NLP Pipelines</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -107,6 +98,7 @@ const WhatIDo = () => {
           <div
             className="what-content what-noTouch"
             ref={(el) => setRef(el, 1)}
+            onClick={() => handleCardClick(1)}
           >
             <div className="what-border1">
               <svg height="100%">
@@ -126,7 +118,8 @@ const WhatIDo = () => {
               <h3>FULL-STACK & MOBILE</h3>
               <h4>Crafting End-to-End Applications</h4>
               <p>
-                I build and scale complete applications, from responsive frontends with Flutter and React to robust backends using Node.js and Django.
+                I ship complete products from Flutter interfaces to backend APIs,
+                with secure auth, role-based flows, and reliable data layers.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
@@ -137,6 +130,7 @@ const WhatIDo = () => {
                 <div className="what-tags">Firebase</div>
                 <div className="what-tags">MySQL</div>
                 <div className="what-tags">MongoDB</div>
+                <div className="what-tags">Mapbox</div>
               </div>
               <div className="what-arrow"></div>
             </div>
