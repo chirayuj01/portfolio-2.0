@@ -30,7 +30,7 @@
 
 .contact-flex {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
   position: relative;
   z-index: 1;
@@ -44,6 +44,34 @@
   letter-spacing: 0.5px;
   color: #a5abb8;
   text-transform: uppercase;
+}
+
+.contact-footer {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+
+.contact-footer p {
+  margin: 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.48);
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.contact-footer span {
+  color: var(--accentColor);
+  font-weight: 500;
+}
+
+.contact-footer svg {
+  font-size: 12px;
+  opacity: 0.6;
 }
 
 .contact-box {
@@ -94,28 +122,7 @@ a.contact-social:hover {
   box-shadow: 0 10px 22px rgba(94, 234, 212, 0.22);
 }
 
-.contact-box h2 {
-  font-weight: 400;
-  font-size: clamp(28px, 3.2vw, 48px);
-  line-height: 1.15;
-  margin: 0;
-  max-width: 450px;
-}
 
-.contact-box h2>span {
-  color: var(--accentColor);
-}
-
-.contact-box h5 {
-  font-size: clamp(34px, 3.8vw, 60px);
-  font-weight: 600;
-  line-height: 1;
-  display: flex;
-  gap: 14px;
-  opacity: 0.55;
-  margin-top: auto;
-  margin-bottom: 0;
-}
 
 .contact-box:first-child a {
   display: inline-block;
@@ -134,11 +141,6 @@ a.contact-social:hover {
   justify-content: flex-start;
 }
 
-.contact-box:last-child {
-  background:
-    linear-gradient(160deg, rgba(94, 234, 212, 0.08), rgba(255, 255, 255, 0.03));
-}
-
 @media only screen and (max-width: 1600px) {
   a.contact-social {
     font-size: 30px;
@@ -149,10 +151,6 @@ a.contact-social:hover {
   .contact-flex {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-  .contact-box:last-child {
-    grid-column: span 2;
-  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -161,14 +159,9 @@ a.contact-social:hover {
     gap: 18px;
   }
 
-  .contact-box,
-  .contact-box:last-child {
+  .contact-box {
     grid-column: span 1;
     min-height: auto;
-  }
-
-  .contact-box h2 {
-    font-size: clamp(24px, 7vw, 38px);
   }
 
   .contact-section {

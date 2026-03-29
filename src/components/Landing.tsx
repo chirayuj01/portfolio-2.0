@@ -2,11 +2,10 @@ import { PropsWithChildren, useEffect, useState } from "react";
 import "./styles/Landing.css";
 
 const roleVariants = [
-  { lead: "Software", main: "Developer" },
-  { lead: "AI/ML", main: "Engineer" },
   { lead: "Full-Stack", main: "Developer" },
+  { lead: "Python", main: "Developer" },
+  { lead: "Competitive", main: "Programmer" }
 ];
-
 const Landing = ({ children }: PropsWithChildren) => {
   const [activeIndex, setActiveIndex] = useState(0);
 

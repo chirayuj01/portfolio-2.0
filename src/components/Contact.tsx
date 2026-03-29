@@ -27,7 +27,7 @@ const Contact = () => {
           <div className="contact-box">
             <h4>Social</h4>
             <a
-              href="https://github.com/chirayujain"
+              href="https://github.com/chirayuj01"
               target="_blank"
               rel="noreferrer"
               data-cursor="disable"
@@ -45,14 +45,9 @@ const Contact = () => {
               LinkedIn <MdArrowOutward />
             </a>
           </div>
-          <div className="contact-box">
-            <h2>
-              Designed and Developed <br /> by <span>Chirayu Jain</span>
-            </h2>
-            <h5>
-              <MdCopyright /> 2026
-            </h5>
-          </div>
+        </div>
+        <div className="contact-footer">
+          <p>Designed and Developed by <span>Chirayu Jain</span> <MdCopyright /> 2026</p>
         </div>
       </div>
     </div>
